@@ -1,11 +1,11 @@
 import { MatrixType, Row } from '../interface';
 
 /**
- * B行加上A行的N倍
+ * A行加上B行的N倍
  */
 export function replacement(rowA: Row, rowB: Row, times: number) {
   for (let i = 0; i < rowB.length; i++) {
-    rowB[i] = rowB[i] + times * rowA[i];
+    rowA[i] = rowA[i] + times * rowB[i];
   }
 }
 
