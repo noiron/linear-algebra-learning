@@ -1,4 +1,4 @@
-import * as  utils from '../utils';
+import * as utils from '../utils';
 
 test('将第二行的两倍加至第一行上', () => {
   const firstRow = [1, 2];
@@ -12,4 +12,13 @@ test('相同的两行相减', () => {
   const secondRow = [5, 5];
   utils.replacement(firstRow, secondRow, -1);
   expect(firstRow).toEqual([0, 0]);
+});
+
+test('查找主元位置', () => {
+  const matrix = [
+    [1, -2, -1, 3, 0],
+    [0, 0, 3, 1, 3],
+    [0, 0, -3, -1, 2],
+  ];
+  expect(utils.findPivotPos(matrix, [0, 0])).toEqual([1, 2]);
 });

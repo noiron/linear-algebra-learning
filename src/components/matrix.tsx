@@ -26,8 +26,8 @@ const Matrix = ({ matrix }: IProps) => {
       {matrix.map((row, index) => {
         return (
           <StyledRow key={index}>
-            {row.map((element, index) => {
-              return <span key={index}>{element}</span>;
+            {row.map((entry, index) => {
+              return <span key={index}>{entry}</span>;
             })}
           </StyledRow>
         );
